@@ -9,6 +9,28 @@
 
 'use strict';
 
+// ── Preloader intro (Eyobed-style) ────────────────
+(function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  function dismiss() {
+    if (preloader.classList.contains('fade-out')) return;
+    preloader.classList.add('fade-out');
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 600);
+  }
+
+  // Show intro for ~2s then smoothly fade out
+  window.addEventListener('load', () => {
+    setTimeout(dismiss, 1900);
+  });
+
+  // Fallback safety
+  setTimeout(dismiss, 2700);
+})();
+
 // ── Navbar scroll effect ──────────────────────────
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('back-to-top');
