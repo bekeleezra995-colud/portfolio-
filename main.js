@@ -58,32 +58,44 @@ if (backToTop) {
 // ── Mobile nav toggle ─────────────────────────────
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
+const navBackdrop = document.getElementById('nav-backdrop');
+
+function closeMobileMenu() {
+  if (!navMenu) return;
+  navMenu.classList.remove('open');
+  if (navToggle) {
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  if (navBackdrop) {
+    navBackdrop.classList.remove('active');
+  }
+  document.body.style.overflow = '';
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('open');
     navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (navBackdrop) navBackdrop.classList.toggle('active', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close on link click
   navMenu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close on outside click
+  // Close on backdrop tap
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close on outside click fallback
   document.addEventListener('click', e => {
-    if (!navbar.contains(e.target) && navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+    if (!navbar.contains(e.target) && e.target !== navBackdrop && navMenu.classList.contains('open')) {
+      closeMobileMenu();
     }
   });
 }
@@ -218,25 +230,25 @@ revealTargets.forEach(selector => {
   });
 });
 
-// ── Particle animation ────────────────────────────
-(function initParticles() {
-  const container = document.getElementById('hero-particles');
-  if (!container) return;
-  const N = 25;
-  for (let i = 0; i < N; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.cssText = `
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      animation-duration: ${8 + Math.random() * 12}s;
-      animation-delay: ${Math.random() * 8}s;
-      width: ${1 + Math.random() * 3}px;
-      height: ${1 + Math.random() * 3}px;
-      opacity: ${0.2 + Math.random() * 0.5};
-    `;
-    container.appendChild(p);
+// ── Eyobed-Style Starry Cosmos Generator ──────────
+(function initEyobedStars() {
+  function generateBoxShadows(n) {
+    let val = '';
+    for (let i = 0; i < n; i++) {
+      const x = Math.floor(Math.random() * 2500);
+      const y = Math.floor(Math.random() * 2500);
+      val += `${x}px ${y}px #ffffff${i < n - 1 ? ', ' : ''}`;
+    }
+    return val;
   }
+
+  const s1 = document.getElementById('stars1');
+  const s2 = document.getElementById('stars2');
+  const s3 = document.getElementById('stars3');
+
+  if (s1) s1.style.boxShadow = generateBoxShadows(600);
+  if (s2) s2.style.boxShadow = generateBoxShadows(180);
+  if (s3) s3.style.boxShadow = generateBoxShadows(80);
 })();
 
 // ── Typing animation for hero title ──────────────
@@ -305,6 +317,28 @@ style.textContent = `
   .nav-link.active-link { color: var(--clr-accent); }
 `;
 document.head.appendChild(style);
+
+// ── Theme toggle (Dark / Light mode) ──────────────
+(function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
+
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const newTheme = isLight ? 'dark' : 'light';
+    if (newTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', newTheme);
+  });
+})();
 
 // ── Init ──────────────────────────────────────────
 onScroll(); // run once on load

@@ -37,8 +37,10 @@
       </svg>
       <div class="preloader-hexagon">
         <svg width="72" height="72" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-          <polygon points="50,8 86.4,29 86.4,71 50,92 13.6,71 13.6,29" stroke="#3b82f6" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" fill="rgba(59, 130, 246, 0.08)" />
-          <text x="50" y="60" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="42" fill="#3b82f6" text-anchor="middle" dominant-baseline="middle">B</text>
+          <polygon points="50,8 86.4,29 86.4,71 50,92 13.6,71 13.6,29" stroke="#3b82f6" stroke-width="5.5"
+            stroke-linejoin="round" stroke-linecap="round" fill="rgba(59, 130, 246, 0.08)" />
+          <text x="50" y="60" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="42"
+            fill="#3b82f6" text-anchor="middle" dominant-baseline="middle">B</text>
         </svg>
       </div>
       <div class="preloader-shimmer" aria-hidden="true"></div>
@@ -53,10 +55,6 @@
   <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#hero" class="nav-logo" aria-label="Bekele Shimelis home">BS</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
-        aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-menu" id="nav-menu" role="list">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -65,13 +63,33 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
+      <div class="nav-right">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ======= HERO ======= -->
   <section id="hero" class="hero" aria-label="Hero introduction">
-    <div class="hero-bg-grid" aria-hidden="true"></div>
-    <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+    <!-- ======= EYOBED-STYLE STARRY SKY BACKGROUND ======= -->
+    <div id="stars-container" class="stars-container" aria-hidden="true">
+      <div id="stars1" class="stars-layer stars-1"></div>
+      <div id="stars2" class="stars-layer stars-2"></div>
+      <div id="stars3" class="stars-layer stars-3"></div>
+    </div>
     <div class="hero-content">
       <p class="hero-greeting">Hi, my name is</p>
       <h1 class="hero-name">Bekele Shimelis.</h1>
@@ -105,7 +123,7 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            Hello! I'm <strong>Bekele Shimelis</strong>, a passionate Full-Stack Developer with a love for building
+            Hello! I'm <strong>Bekele </strong>, a passionate Full-Stack Developer with a love for building
             clean, efficient, and impactful software. I thrive at the intersection of creativity and engineering —
             turning complex problems into elegant solutions.
           </p>
@@ -123,7 +141,7 @@
             <li><span class="list-arrow" aria-hidden="true">▹</span>React &amp; Next.js</li>
             <li><span class="list-arrow" aria-hidden="true">▹</span>Node.js / Express</li>
             <li><span class="list-arrow" aria-hidden="true">▹</span>Python &amp; FastAPI</li>
-            <li><span class="list-arrow" aria-hidden="true">▹</span>Flutter &amp; Dart</li>
+            <li><span class="list-arrow" aria-hidden="true">▹</span>Flutter</li>
             <li><span class="list-arrow" aria-hidden="true">▹</span>Machine Learning / AI</li>
           </ul>
         </div>
@@ -192,28 +210,6 @@
           <h3 class="skill-card-title">Mobile</h3>
           <ul class="skill-tags" aria-label="Mobile skills">
             <li class="skill-tag">Flutter</li>
-            <li class="skill-tag">Dart</li>
-            <li class="skill-tag">React Native</li>
-            <li class="skill-tag">iOS / Android</li>
-          </ul>
-        </div>
-        <!-- AI / ML -->
-        <div class="skill-card" data-category="AI/ML">
-          <div class="skill-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
-            </svg>
-          </div>
-          <h3 class="skill-card-title">AI &amp; Machine Learning</h3>
-          <ul class="skill-tags" aria-label="AI and ML skills">
-            <li class="skill-tag">Python</li>
-            <li class="skill-tag">TensorFlow</li>
-            <li class="skill-tag">PyTorch</li>
-            <li class="skill-tag">scikit-learn</li>
-            <li class="skill-tag">OpenAI API</li>
-            <li class="skill-tag">LangChain</li>
           </ul>
         </div>
         <!-- Databases -->
@@ -245,11 +241,8 @@
           <h3 class="skill-card-title">DevOps &amp; Cloud</h3>
           <ul class="skill-tags" aria-label="DevOps and Cloud skills">
             <li class="skill-tag">Docker</li>
-            <li class="skill-tag">AWS</li>
-            <li class="skill-tag">GCP</li>
             <li class="skill-tag">GitHub Actions</li>
             <li class="skill-tag">Vercel</li>
-            <li class="skill-tag">Linux</li>
           </ul>
         </div>
       </div>
@@ -265,8 +258,9 @@
       </div>
       <div class="projects-grid">
 
-        <!-- Project 1 -->
+        <!-- Project 1 — HealthLink 360 (Featured) -->
         <article class="project-card featured" aria-labelledby="proj1-title">
+          <img src="healthlink.png" alt="HealthLink 360 platform screenshot" class="project-screenshot" />
           <div class="project-top">
             <div class="project-folder-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -274,13 +268,13 @@
               </svg>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for HealthLink" title="GitHub">
+              <a href="https://github.com/bekeleezra995-colud/halth-link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for HealthLink 360" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              <a href="#" class="project-link" aria-label="Live demo of HealthLink" title="Live Demo">
+              <a href="https://healthlink-fyp.github.io/HealthLink/" target="_blank" rel="noopener noreferrer" class="project-link project-view-btn" aria-label="Live demo of HealthLink 360" title="Live Demo">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -289,11 +283,11 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title" id="proj1-title">HealthLink System</h3>
+          <h3 class="project-title" id="proj1-title">HealthLink 360</h3>
           <p class="project-desc">
-            A comprehensive health management platform connecting patients, doctors, and clinics.
-            Features real-time appointment scheduling, telemedicine video calls, and AI-powered
-            symptom checking — built with React, Node.js, and PostgreSQL.
+            A comprehensive healthcare platform connecting patients, doctors, and clinics with AI-driven
+            care recommendations. Features doctor discovery, medical store integration, appointment workflows,
+            and specialized clinical portals.
           </p>
           <ul class="project-tech" aria-label="Technologies used">
             <li>React</li>
@@ -304,8 +298,9 @@
           </ul>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card" aria-labelledby="proj2-title">
+        <!-- Project 2 — EduBridge (Featured) -->
+        <article class="project-card featured" aria-labelledby="proj2-title">
+          <img src="edubridge.jpg" alt="EduBridge platform screenshot" class="project-screenshot" />
           <div class="project-top">
             <div class="project-folder-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -313,13 +308,13 @@
               </svg>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for AI Chat App" title="GitHub">
+              <a href="https://github.com/Mikiyas97/EduBridge" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for EduBridge" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              <a href="#" class="project-link" aria-label="Live demo of AI Chat App" title="Live Demo">
+              <a href="https://github.com/Mikiyas97/EduBridge" target="_blank" rel="noopener noreferrer" class="project-link project-view-btn" aria-label="View EduBridge project" title="View">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -328,23 +323,24 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title" id="proj2-title">AI-Powered Chat Assistant</h3>
+          <h3 class="project-title" id="proj2-title">EduBridge</h3>
           <p class="project-desc">
-            An intelligent conversational assistant built with LangChain and OpenAI GPT, featuring
-            context-aware responses, document ingestion (RAG), and multi-language support for Amharic
-            and English.
+            A comprehensive digital learning platform connecting students, teachers, and schools
+            across Ethiopia. Supports curriculum delivery for Grades 9–12 in English &amp; Amharic,
+            with offline-first architecture, progress tracking, and school administration tools.
           </p>
           <ul class="project-tech" aria-label="Technologies used">
-            <li>Python</li>
-            <li>LangChain</li>
-            <li>FastAPI</li>
             <li>React</li>
-            <li>OpenAI</li>
+            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>Flutter</li>
+            <li>Docker</li>
           </ul>
         </article>
 
-        <!-- Project 3 -->
-        <article class="project-card" aria-labelledby="proj3-title">
+        <!-- Project 3 — Smart Attendance System (Featured) -->
+        <article class="project-card featured" aria-labelledby="proj3-title">
+          <img src="attendance.jpg" alt="Smart Attendance System screenshot" class="project-screenshot" />
           <div class="project-top">
             <div class="project-folder-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -352,13 +348,13 @@
               </svg>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for Market App" title="GitHub">
+              <a href="https://github.com/bekeleezra995-colud/atendance-system-full-stuck-project-" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for Attendance System" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              <a href="#" class="project-link" aria-label="Live demo of Market App" title="Live Demo">
+              <a href="https://github.com/bekeleezra995-colud/atendance-system-full-stuck-project-" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Attendance System project" title="View">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -367,23 +363,24 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title" id="proj3-title">EthioMarket Mobile App</h3>
+          <h3 class="project-title" id="proj3-title">Smart Attendance System</h3>
           <p class="project-desc">
-            A cross-platform e-commerce mobile app for the Ethiopian market, built with Flutter.
-            Features real-time inventory, Chapa payment gateway integration, and offline-first
-            architecture for low-connectivity environments.
+            A full-stack face-recognition attendance system using real-time camera feed to identify
+            students by USN and name. Features a live detection dashboard, attendance logs, and
+            admin panel — built as a complete end-to-end solution.
           </p>
           <ul class="project-tech" aria-label="Technologies used">
-            <li>Flutter</li>
-            <li>Dart</li>
-            <li>Firebase</li>
-            <li>Chapa API</li>
+            <li>Python</li>
+            <li>OpenCV</li>
+            <li>Flask</li>
+            <li>React</li>
             <li>SQLite</li>
           </ul>
         </article>
 
-        <!-- Project 4 -->
-        <article class="project-card" aria-labelledby="proj4-title">
+        <!-- Project 4 — Inventory Store Management System (Featured) -->
+        <article class="project-card featured" aria-labelledby="proj4-title">
+          <img src="inventory.jpg" alt="Inventory Store Management System screenshot" class="project-screenshot" />
           <div class="project-top">
             <div class="project-folder-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -391,13 +388,13 @@
               </svg>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for DevTrack" title="GitHub">
+              <a href="https://github.com/bekeleezra995-colud/inventory-store-management-system" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for Inventory System" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              <a href="#" class="project-link" aria-label="Live demo of DevTrack" title="Live Demo">
+              <a href="https://github.com/bekeleezra995-colud/inventory-store-management-system" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Inventory System project" title="View">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -406,62 +403,24 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title" id="proj4-title">DevTrack — Project Manager</h3>
+          <h3 class="project-title" id="proj4-title">Inventory Store Management System</h3>
           <p class="project-desc">
-            A Kanban-style project management tool with real-time collaboration, built with Next.js
-            and Supabase. Supports drag-and-drop task boards, GitHub integration, and team
-            notifications via WebSocket.
-          </p>
-          <ul class="project-tech" aria-label="Technologies used">
-            <li>Next.js</li>
-            <li>Supabase</li>
-            <li>TypeScript</li>
-            <li>DnD Kit</li>
-            <li>WebSocket</li>
-          </ul>
-        </article>
-
-        <!-- Project 5 -->
-        <article class="project-card" aria-labelledby="proj5-title">
-          <div class="project-top">
-            <div class="project-folder-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-              </svg>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for Resume Scanner" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Live demo of Resume Scanner" title="Live Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title" id="proj5-title">Smart Resume Screener</h3>
-          <p class="project-desc">
-            ML pipeline that parses resumes and matches candidates to job descriptions using NLP
-            and semantic similarity. Achieves 91% accuracy with a custom fine-tuned BERT model.
-            Deployed on AWS Lambda with a React front-end.
+            A full-stack inventory and store management system with real-time dashboards tracking
+            employees, suppliers, categories, products, and sales. Features a sidebar navigation,
+            role-based access, and a clean admin interface.
           </p>
           <ul class="project-tech" aria-label="Technologies used">
             <li>Python</li>
-            <li>BERT</li>
-            <li>FastAPI</li>
-            <li>React</li>
-            <li>AWS Lambda</li>
+            <li>Tkinter</li>
+            <li>MySQL</li>
+            <li>Pillow</li>
+            <li>CRUD</li>
           </ul>
         </article>
 
-        <!-- Project 6 -->
-        <article class="project-card" aria-labelledby="proj6-title">
+        <!-- Project 5 — SyncWrite Collab Editor (Featured) -->
+        <article class="project-card featured" aria-labelledby="proj5-title">
+          <img src="syncwrite.jpg" alt="SyncWrite collaborative editor screenshot" class="project-screenshot" />
           <div class="project-top">
             <div class="project-folder-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -469,13 +428,13 @@
               </svg>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="GitHub repository for Open Source CLI" title="GitHub">
+              <a href="https://github.com/bekeleezra995-colud/syncwrite-collab-editor" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for SyncWrite" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              <a href="#" class="project-link" aria-label="Live demo of Open Source CLI Tool" title="Live Demo">
+              <a href="https://github.com/bekeleezra995-colud/syncwrite-collab-editor" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View SyncWrite project" title="View">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -484,17 +443,58 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title" id="proj6-title">CLI Dev Toolkit</h3>
+          <h3 class="project-title" id="proj5-title">SyncWrite — Collab Editor</h3>
           <p class="project-desc">
-            Open-source command-line tool for scaffolding full-stack projects with opinionated
-            defaults. Supports React, Next.js, FastAPI, and Flutter templates.
-            300+ GitHub stars.
+            A real-time collaborative document editor where users can create, own, share, and
+            search documents. Features live multi-user editing, owned &amp; shared document
+            management, and a recently-opened history panel.
+          </p>
+          <ul class="project-tech" aria-label="Technologies used">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Socket.io</li>
+            <li>MongoDB</li>
+            <li>Express</li>
+          </ul>
+        </article>
+
+        <!-- Project 6 — Authentication System (Featured) -->
+        <article class="project-card featured" aria-labelledby="proj6-title">
+          <img src="auth.jpg" alt="Authentication System screenshot" class="project-screenshot" />
+          <div class="project-top">
+            <div class="project-folder-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/bekeleezra995-colud/AUTONTICATION-SYSTEM" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository for Authentication System" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </a>
+              <a href="https://github.com/bekeleezra995-colud/AUTONTICATION-SYSTEM" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Authentication System project" title="View">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" id="proj6-title">Authentication System</h3>
+          <p class="project-desc">
+            A full-stack authentication system supporting sign up, sign in, session management,
+            and Google OAuth. Built from the ground up with secure identity workflows, JWT tokens,
+            and a clean login/register UI.
           </p>
           <ul class="project-tech" aria-label="Technologies used">
             <li>Node.js</li>
-            <li>TypeScript</li>
-            <li>Open Source</li>
-            <li>CLI</li>
+            <li>Express</li>
+            <li>JWT</li>
+            <li>Google OAuth</li>
+            <li>MongoDB</li>
           </ul>
         </article>
 
@@ -512,60 +512,69 @@
       <div class="experience-layout">
         <div class="exp-tabs" role="tablist" aria-label="Experience tabs">
           <button class="exp-tab active" role="tab" aria-selected="true" aria-controls="exp-panel-1" id="exp-tab-1"
-            data-target="exp-panel-1">Freelance</button>
+            data-target="exp-panel-1">Full-Stack Dev</button>
           <button class="exp-tab" role="tab" aria-selected="false" aria-controls="exp-panel-2" id="exp-tab-2"
-            data-target="exp-panel-2">Tech Hub</button>
+            data-target="exp-panel-2">Open Source</button>
           <button class="exp-tab" role="tab" aria-selected="false" aria-controls="exp-panel-3" id="exp-tab-3"
-            data-target="exp-panel-3">Startup Lab</button>
+            data-target="exp-panel-3">Mobile Dev</button>
           <button class="exp-tab" role="tab" aria-selected="false" aria-controls="exp-panel-4" id="exp-tab-4"
             data-target="exp-panel-4">University</button>
         </div>
         <div class="exp-panels">
           <div class="exp-panel active" id="exp-panel-1" role="tabpanel" aria-labelledby="exp-tab-1">
-            <h3 class="exp-role">Senior Full-Stack Developer <span class="exp-company">@ Self-Employed</span></h3>
-            <p class="exp-date">2022 — Present</p>
+            <h3 class="exp-role">Full-Stack Developer</h3>
+            <p class="exp-date">2025 — Present</p>
             <ul class="exp-list">
-              <li>Delivered 15+ end-to-end projects for international and local clients across fintech, health, and
-                e-commerce verticals.</li>
-              <li>Built and deployed scalable REST APIs and GraphQL services handling 100k+ requests/day on AWS.</li>
-              <li>Mentored 8 junior developers through code reviews, pair programming, and structured learning plans.
-              </li>
-              <li>Designed and shipped 4 cross-platform Flutter apps, achieving 4.7+ App Store ratings.</li>
-              <li>Integrated AI/ML features (NLP, computer vision) into production systems for clients.</li>
+              <li>Built and shipped 6+ full-stack projects end-to-end covering education, inventory, attendance,
+                authentication, and real-time collaboration domains.</li>
+              <li>Developed <strong>EduBridge</strong> — a digital learning platform for Grades 9–12 with
+                offline-first architecture, multi-role access, and bilingual (English &amp; Amharic) support.</li>
+              <li>Designed and implemented RESTful APIs with Node.js &amp; Express, backed by MongoDB and PostgreSQL,
+                with Docker-based containerized deployments.</li>
+              <li>Built a real-time collaborative document editor (SyncWrite) using Socket.io with live
+                multi-user editing, document ownership, and search features.</li>
+              <li>Engineered a face-recognition attendance system using Python &amp; OpenCV with a live camera
+                feed, student identification by USN, and an admin dashboard.</li>
             </ul>
           </div>
           <div class="exp-panel" id="exp-panel-2" role="tabpanel" aria-labelledby="exp-tab-2" hidden>
-            <h3 class="exp-role">Full-Stack Engineer <span class="exp-company">@ Addis Tech Hub</span></h3>
-            <p class="exp-date">2021 — 2022</p>
+            <h3 class="exp-role">Open Source Contributor <span class="exp-company">@ GitHub</span></h3>
+            <p class="exp-date">2024 — Present</p>
             <ul class="exp-list">
-              <li>Developed and maintained SaaS products using React, Node.js, and PostgreSQL for 3,000+ active users.
-              </li>
-              <li>Led migration of monolithic backend to microservices architecture, reducing latency by 40%.</li>
-              <li>Collaborated with designers and product managers in agile sprints to ship features on time.</li>
-              <li>Implemented CI/CD pipelines with GitHub Actions and Docker, cutting deployment time from hours to
-                minutes.</li>
+              <li>Maintained public repositories on GitHub covering full-stack web, authentication systems,
+                inventory management, and collaborative tools.</li>
+              <li>Published <strong>Authentication System</strong> — a full-stack auth starter with JWT, Google
+                OAuth, session management, and a clean login/register flow.</li>
+              <li>Released <strong>Inventory Store Management System</strong> — a desktop app with real-time
+                dashboards tracking employees, suppliers, products, categories, and sales.</li>
+              <li>Implemented CI/CD pipelines using GitHub Actions and Vercel for automated deployments
+                across multiple projects.</li>
+              <li>Contributed structured, documented codebases following clean architecture and SOLID principles
+                to help the developer community.</li>
             </ul>
           </div>
           <div class="exp-panel" id="exp-panel-3" role="tabpanel" aria-labelledby="exp-tab-3" hidden>
-            <h3 class="exp-role">Software Developer Intern <span class="exp-company">@ iCog Labs</span></h3>
-            <p class="exp-date">2020 — 2021</p>
+            <h3 class="exp-role">Mobile &amp; Flutter Developer</h3>
+            <p class="exp-date">2026 — Present</p>
             <ul class="exp-list">
-              <li>Built internal tools and dashboards using React and Python, streamlining research data pipelines.</li>
-              <li>Contributed to open-source AI research projects, specifically in NLP for Amharic language processing.
-              </li>
-              <li>Assisted in training and evaluating ML models for computer vision tasks using TensorFlow.</li>
-              <li>Gained hands-on experience in robotics software integration using ROS (Robot Operating System).</li>
+              <li>Developing mobile user interfaces using Flutter to create clean, responsive cross-platform experiences.</li>
+              <li>Built client screens and UI components for mobile applications with Flutter widgets and layouts.</li>
+              <li>Implemented user flows and navigation in Flutter for practical projects including EduBridge mobile interface.</li>
+              <li>Continuously learning and strengthening core Flutter skills through hands-on app building and experimentation.</li>
             </ul>
           </div>
           <div class="exp-panel" id="exp-panel-4" role="tabpanel" aria-labelledby="exp-tab-4" hidden>
-            <h3 class="exp-role">B.Sc. Computer Science <span class="exp-company">@ Addis Ababa University</span></h3>
-            <p class="exp-date">2017 — 2021</p>
+            <h3 class="exp-role">B.Sc. Computer Science <span class="exp-company">@ Debre Berhan University</span></h3>
+            <p class="exp-date">2024 — Present</p>
             <ul class="exp-list">
-              <li>Graduated with honors in Computer Science with a focus on AI and distributed systems.</li>
-              <li>Led the university coding club for 2 years, organizing hackathons with 200+ participants.</li>
-              <li>Final year thesis: "Amharic Named Entity Recognition using Transformer Models" — published internally.
-              </li>
-              <li>Teaching Assistant for Data Structures &amp; Algorithms course during senior year.</li>
+              <li>Studying Computer Science with a focus on software engineering, databases, algorithms,
+                and system design.</li>
+              <li>Building hands-on academic projects including <strong>EduBridge</strong> — a digital learning
+                platform built with React, Node.js, Flutter, and Docker.</li>
+              <li>Developed a Smart Attendance System applying computer vision (OpenCV)
+                and Python for automated student identification.</li>
+              <li>Gaining strong foundations in data structures, OOP, REST API design, SQL/NoSQL databases,
+                and version control with Git.</li>
             </ul>
           </div>
         </div>
@@ -594,8 +603,8 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:bekele@example.com" class="contact-info-link"
-                id="contact-email-link">bekele@example.com</a>
+              <a href="mailto:bekeleezra995@gmail.com" class="contact-info-link"
+                id="contact-email-link">bekeleezra995@gmail.com</a>
             </div>
             <div class="contact-info-item">
               <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -603,7 +612,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Addis Ababa, Ethiopia</span>
+              <span>Debre Birhan, Ethiopia</span>
             </div>
           </div>
           <div class="contact-socials" aria-label="Social media links">
@@ -614,18 +623,11 @@
                   d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
             </a>
-            <a href="https://linkedin.com/in/bekele-shimelis" class="social-link" aria-label="LinkedIn profile"
+            <a href="https://www.linkedin.com/in/bekele-shimels-846b4b277" class="social-link" aria-label="LinkedIn profile"
               target="_blank" rel="noopener noreferrer" id="social-linkedin">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
-            <a href="https://twitter.com/bekele_dev" class="social-link" aria-label="Twitter profile" target="_blank"
-              rel="noopener noreferrer" id="social-twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z" />
               </svg>
             </a>
           </div>

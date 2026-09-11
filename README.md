@@ -51,7 +51,7 @@ Find the `#experience` section. Edit the `<button class="exp-tab">` labels and `
 ### Change contact info
 Replace in `index.html`:
 ```html
-<a href="mailto:bekele@example.com" ...>bekele@example.com</a>
+<a href="mailto:bekeleezra995@gmail.com" ...>bekeleezra995@gmail.com</a>
 ```
 
 ### Change colors
