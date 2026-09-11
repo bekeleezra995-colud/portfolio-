@@ -21,6 +21,7 @@ portfolio/
 ├── index.html      ← All page content (sections, text, projects, experience)
 ├── style.css       ← All styling (colors, layout, animations)
 ├── main.js         ← Interactivity (navbar, tabs, form, animations)
+├── resume.pdf      ← Your CV / Resume file for the navbar Resume button
 ├── avatar.jpg      ← Your profile photo (replace with your real photo)
 └── README.md       ← This file
 ```

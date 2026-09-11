@@ -83,7 +83,7 @@ if (navToggle && navMenu) {
   });
 
   // Close on link click
-  navMenu.querySelectorAll('.nav-link').forEach(link => {
+  navMenu.querySelectorAll('.nav-link, .nav-resume-btn').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
